@@ -4,7 +4,6 @@ import os, time
 
 panera = []
 tested = []
-checked = []
 
 dicks = False
 step = 1 # Amount of numbers to add each time it checks
@@ -20,8 +19,6 @@ def _cPH(var):
         else:
                 print "[-] " + str(var)
         tested.append(var)
-        checked.append(var)
-
 
 _dicks = 0
 while not dicks:
@@ -55,7 +52,7 @@ while not dicks:
                         print 'Not a valid number.'       
 
 while not limit == 0:
-    if _var not in checked:
+    if _var not in tested:
         _cPH(_var)
     _var += step
     limit -= 1
